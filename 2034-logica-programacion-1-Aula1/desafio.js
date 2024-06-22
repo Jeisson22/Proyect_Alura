@@ -1,29 +1,21 @@
-// let bienvenida = prompt("¡Bienvenida y bienvenido a nuestro sitio web!");
-
-// Para verificar si la entrada contiene letras
 let edad = 25, numeroVentas = 50, saldoDisponible = 1000;
+let soloLetras = /^[A-Za-z]+$/;
 let bienvenida;
-let soloLetras = /^[A-Za-z]+$/ ;
-let nombre = bienvenida, mensajeDeError = "¡Error! Completa todos los campos";
+let nombre;
 
 do {
-    let bienvenida = prompt("¡Bienvenida y bienvenido a nuestro sitio web!");
-    if(soloLetras.test(bienvenida)){
+    bienvenida = prompt("¡Bienvenida y bienvenido a nuestro sitio web! Ingresa tu nombre:");
+
+    if (soloLetras.test(bienvenida)) {
+        nombre = bienvenida; // Almacenamos el nombre válido
     } else {
-        alert("Ingresa un nombre valido");
+        alert("Por favor, ingresa un nombre válido (solo letras).");
     }
-    alert(`Mi nombre es : ${bienvenida} \n Tengo : ${edad} años. \n  Mi número de ventas : ${numeroVentas} \n  Mi saldo es : ${saldoDisponible} `);
-} while (soloLetras.test == bienvenida);
 
-// let nombre = bienvenida, mensajeDeError = "¡Error! Completa todos los campos";
+} while (!nombre); // Repetir hasta que se haya ingresado un nombre válido
 
+// Una vez que se tiene un nombre válido, mostrar los datos
+alert(`Bienvenido ${nombre}!\n\nMi nombre es: ${nombre}\nTengo: ${edad} años.\nMi número de ventas: ${numeroVentas}\nMi saldo es: $${saldoDisponible}`);
 
-
-// alert("Mi nombre es : " + nombre + " \n" + "Mi edad : " + edad + " años.");
-// alert(`Mi nombre es : ${nombre} \n Tengo : ${edad} años. \n  Mi número de ventas : ${numeroVentas} \n  Mi saldo es : ${saldoDisponible} `);
-
-// alert(mensajeDeError);
-
-// let validad = typeof(bienvenida);
 
 
